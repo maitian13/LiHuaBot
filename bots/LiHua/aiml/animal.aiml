@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="UTF8"?>
+<aiml>
+<category><pattern>鸡 怎么 叫</pattern><template>wow~</template></category>
+<category><pattern>猪 怎么 叫</pattern><template>哼哼</template></category>
+<category><pattern><set>animal</set> 怎么 叫</pattern><template>wow~</template></category>
+</aiml>
