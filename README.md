@@ -1,6 +1,6 @@
 # LiHuaBot
 A bot,supporting Chinese,learning from Alice Bot
-有志者可以一起玩~
+有志者可以一起玩~<br>
   .v0（finished）
   1、创建机器人的基本流程，以及机器人的基本类
   2、实现了中文精确匹配，但是匹配策略明显太少
