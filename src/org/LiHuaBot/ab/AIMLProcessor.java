@@ -74,4 +74,13 @@ public class AIMLProcessor {
         Category c=new Category(pattern,that,topic,template);
         list.add(c);
     }
+    public static String response(String input,String that,String topic,Chat chat){
+        //预处理
+        input=DOMutil.patternClean(input).trim();
+        topic=DOMutil.patternClean(topic).trim();
+        that=DOMutil.patternClean(that).trim();
+        NodeMapper node= chat.bot.brain.match(input,that,topic);
+        if(node==null)return "not match";
+        return node.category==null?"match but no data":node.category.template;
+    }
 }

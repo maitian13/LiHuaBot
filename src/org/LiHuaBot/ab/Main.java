@@ -9,5 +9,7 @@ public class Main {
         MagicStrings.setRoot_path();
         Bot LiHua=new Bot("LiHua");
         System.out.println(LiHua.name);
+        Chat c=new Chat(LiHua,1);
+        c.chat();
     }
 }

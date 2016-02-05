@@ -61,5 +61,16 @@ public class GraphMaster {
     private String inputThatTopic(String input,String that,String topic){
         return input.trim()+" <THAT> "+that+" <TOPIC> "+topic;
     }
-
+    public NodeMapper match(String input,String that,String topic){
+        String inputthattopic=inputThatTopic(input,that,topic);
+        Path path=Path.ArrayToPath(inputthattopic.split(" "));
+        return find(path,root);
+    }
+    public NodeMapper find(Path path,NodeMapper node){
+        if(path==null)return null;
+        NodeMapper next=NodeMapperOperater.get(node, path.word);
+        if(next==null)return null;
+        if(path.next==null)return node;
+        else return find(path.next,next);
+    }
 }
